@@ -2,12 +2,14 @@ var postData=require("../../data/postData.js");
 
 Page({
     data:{
-        content:[]
     },
     onLoad:function(){
-    //  this.data.content=postData.postList;
-    // console.log(this.data.content)
      this.setData({content:postData.postList})
-     //console.log(this.data.content)
+    },
+    onPostTap:function(event){
+        var postID=event.currentTarget.dataset.postid;
+        wx.navigateTo({
+          url:"./post-detail/post-detail?id="+postID
+        })
     }
 })
