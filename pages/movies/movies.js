@@ -16,6 +16,12 @@ Page({
         this.getMovieData(comingSoonUrl,"comingSoon","即将上映");
         this.getMovieData(top250Url,"top250","豆瓣top250");
     },
+    onMoreMovieTap:function(event){
+      var category=event.currentTarget.dataset.category;
+      wx.navigateTo({
+        url:"movie-more/movie-more?category="+category
+      })
+    },
     getMovieData:function(url,settedkey,topTitle){
       var that=this;
       wx.request({
@@ -59,6 +65,7 @@ Page({
         }
         this.setData(readyData)
       }
-    } 
+    }
+    
 
 })

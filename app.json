@@ -4,12 +4,12 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/movies/movies",
-    "pages/news/post-detail/post-detail"
+    "pages/news/post-detail/post-detail",
+    "pages/movies/movie-more/movie-more"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor":"#405f80",
-    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"#fff"
   },
   "tabBar": {

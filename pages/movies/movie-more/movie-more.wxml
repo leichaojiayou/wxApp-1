@@ -1,0 +1,6 @@
+<!--pages/movies/movie-more/movie-more.wxml-->
+<import src="../movie-square-template/movie-square-template.wxml"/>
+<view>
+    <template is="movieSquareTemplate" data="{{movies}}">
+    </template>
+</view>

@@ -29,8 +29,25 @@ function convertToStarsArray(stars){
   return array;
 }
 
+function Http(url,callback){
+      wx.request({
+        url:url,
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          "Content-Type":"application/x-www-form-urlencoded"
+        }, 
+        success: function(res){
+          callback(res.data);
+        },
+        fail: function(error) {
+          console.log(error)
+        }
+      })
+    }
 module.exports = {
   formatTime: formatTime,
-  convertToStarsArray:convertToStarsArray
+  convertToStarsArray:convertToStarsArray,
+  Http:Http
 }
  
