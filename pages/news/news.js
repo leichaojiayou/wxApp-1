@@ -11,5 +11,11 @@ Page({
         wx.navigateTo({
           url:"./post-detail/post-detail?id="+postID
         })
+    },
+    onSwiperTap:function(event){
+        var postID=event.target.dataset.postid;
+        wx.navigateTo({
+          url:"./post-detail/post-detail?id="+postID
+        })
     }
 })

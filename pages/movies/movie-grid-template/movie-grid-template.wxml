@@ -1,0 +1,9 @@
+<import src="../stars-template/stars-template.wxml"/>
+
+<template name="movieGridTemplate">
+    <view class="movie-grid-container">
+        <image class="movie-grid-img" src="{{coverImg}}"></image>
+        <text class="movie-grid-text">{{title}}</text>
+        <template is="starsTemplate" data="{{stars:stars,score:average}}"/>
+    </view>
+</template>

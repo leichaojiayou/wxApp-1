@@ -1,0 +1,43 @@
+@import "../movie-grid-template/movie-grid-template.wxss";
+
+.movie-list-container{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30rpx;
+}
+.movie-list-inner{
+    margin:0 auto 20rpx;
+}
+
+.movie-list-head{
+    padding:30rpx 20rpx 22rpx;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.slogan{
+    font-size:24rpx;
+}
+.more{
+    height: 30rpx;
+    width:80rpx;
+}
+
+.arrow-right{
+    vertical-align: middle;
+    width:9rpx;
+    height: 16rpx;
+}
+.more-text{
+    vertical-align: middle;
+    margin-right:10rpx;
+    color:#1f4ba5;
+}
+
+.movie-list-body{
+    display: flex;
+    flex-direction: row;
+}
+

@@ -87,3 +87,23 @@
     color:#666;
 }
 
+.share-mask{
+    margin:0;
+    padding:0;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #333;
+    opacity: 0.5;
+    z-index: 1111;
+}
+.share-mask .step-share-img{
+    position: absolute;
+    width:311rpx;
+    height: 244rpx;
+    right:40rpx;
+    top:0;
+    z-index: 1112;
+}
