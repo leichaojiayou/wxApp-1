@@ -34,7 +34,15 @@ Page({
   onScrollMore:function(event){
     var nextUrl=this.data.requestUrl+"?start="+this.data.totalCount+"&count=20";
     util.Http(nextUrl,this.processMoviesData);
+    wx.showNavigationBarLoading();
     console.log("加载更多");
+  },
+  onPullDownRefresh: function(){
+   var refreshUrl=this.data.requestUrl+"?start=0&count=20";
+   this.data.movies={};
+   this.data.isEmpty="true";
+    util.Http(refreshUrl,this.processMoviesData);
+    wx.showNavigationBarLoading();
   },
   processMoviesData:function(moviedata){
     var movies=[];
@@ -64,7 +72,8 @@ Page({
        this.setData({
           movies:totalMovies
         })
-       
+       wx.hideNavigationBarLoading();
+       wx.stopPullDownRefresh();
   },
   onReady: function () {
     wx.setNavigationBarTitle({

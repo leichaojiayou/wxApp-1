@@ -46,6 +46,12 @@ Page({
             });
             app.globalData.g_isMusicPlaying = false;
         })
+        wx.onBackgroundAudioStop(function () {
+            that.setData({
+                isPlayingMusic: false
+            });
+            app.globalData.g_isMusicPlaying = false;
+        })
 
     },
     collect: function () {
